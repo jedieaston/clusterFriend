@@ -25,4 +25,4 @@ That's better. Linkedin is in the profile! /s
 Just do docker build . (or if you aren't somewhere with docker, pip install -r requirements.txt && cd clusterFriend && gunicorn -p 8080 app:app)
 
 
-\* you know, with nginx. I was keeping it simple, most k8s work I've done I use separate proxy stuff. and fly does it for you.
+\* you know, with nginx or traefik or caddy or whatever. I was keeping it simple, most k8s work I've done I use separate proxy stuff. and fly does it for you.
