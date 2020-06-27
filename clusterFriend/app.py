@@ -16,13 +16,15 @@ def fortune():
     time = str(datetime.today())
     result = subprocess.check_output("fortune", shell=True, text=True)
     hostname = socket.gethostname()
+    internalIP = socket.gethostbyname(hostname)
     externalIP = urllib.request.urlopen('https://ident.me').read().decode('utf8')
     # cleaned = result.replace('\t', '  ').replace('\n', '')
     return {
         "time": time,
         "fortune": result,
         "hostname": hostname,
-        "external_ip": externalIP
+        "external_ip": externalIP,
+        "internal_ip": internalIP
     }
 @app.route('/')
 def index():
