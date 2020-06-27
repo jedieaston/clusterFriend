@@ -3,7 +3,7 @@
 Well, I needed a little thing to play with when messing with things like k8s or fly.io, so this is a flask app that returns
 the:
 
-+ external IP of the box
++ external + internal IP of the box (or container, depending on how you ran it)
 + the hostname of where it is
 + the current time
 + a fortune from the Alpine (openBSD) fortune package.
